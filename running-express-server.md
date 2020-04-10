@@ -1,6 +1,6 @@
 # Запуск Сервера Express GraphQL
 
-Самый простой способ запустить сервер API GraphQL - использовать [Express](https://expressjs.com/ru/){:target="_blank"}, популярную среду веб-приложений для Node.js. Вам нужно будет установить две дополнительные зависимости:
+Самый простой способ запустить сервер API GraphQL - использовать [Express](https://expressjs.com/ru/), популярную среду веб-приложений для Node.js. Вам нужно будет установить две дополнительные зависимости:
 
 ```bash
 npm install express express-graphql graphql --save
