@@ -2,7 +2,7 @@
 
 ## Предпосылки
 
-Перед началом работы у вас должен быть установлен Node v6, хотя примеры в основном должны работать и в предыдущих версиях Node. В этом руководстве мы не будем использовать какие-либо языковые функции, требующие транспиляции, но мы будем использовать некоторые функции ES6, такие как [промисы](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise), [классы](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Classes) и [стрелочные функции](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions), поэтому, если вы не знакомы с ними, вы можете сначала прочитать о них.
+Перед началом работы у вас должен быть установлен Node v6, хотя примеры в основном должны работать и в предыдущих версиях Node. В этом руководстве мы не будем использовать какие-либо языковые функции, требующие транспиляции, но мы будем использовать некоторые функции ES6, такие как [промисы](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise){:target="_blank"}, [классы](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Classes){:target="_blank"} и [стрелочные функции](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions){:target="_blank"}, поэтому, если вы не знакомы с ними, вы можете сначала прочитать о них.
 
 Чтобы создать новый проект и установить GraphQL.js в текущем каталоге:
 
