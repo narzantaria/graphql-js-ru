@@ -15,6 +15,10 @@ https://graphql.org/graphql-js/ перевод на русский
   * [Типы объектов](object-types.md)
   * [Мутации и типы Input](mutations-and-input-types.md)
   * [Аутентификация и Middleware Express](authentication-and-express-middleware.md)
+* Продвинутые темы
+  * [Конструирование типов](constructing-types.md)
+* Справочник API
+  * [express-graphql](express-graphql.md)  
 
 
 
