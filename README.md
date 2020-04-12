@@ -12,6 +12,9 @@ https://graphql.org/graphql-js/ перевод на русский
   * [GraphQL-клиенты](graphql-clients.md)
   * [Основные типы](basic-types.md)
   * [Передача аргументов](passing-arguments.md)
+  * [Типы объектов](object-types.md)
+  * [Мутации и типы Input](mutations-and-input-types.md)
+  * [Аутентификация и Middleware Express](authentication-and-express-middleware.md)
 
 
 
