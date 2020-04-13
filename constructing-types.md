@@ -6,7 +6,7 @@
 
 Например, скажем, мы создаем простой API, который позволяет вам получать пользовательские данные для нескольких пользователей с жестким кодом на основе идентификатора. Используя ```buildSchema```, мы могли бы написать сервер с:
 
-```
+```javascript
 var express = require('express');
 var graphqlHTTP = require('express-graphql');
 var { buildSchema } = require('graphql');
@@ -52,7 +52,7 @@ console.log('Running a GraphQL API server at localhost:4000/graphql');
 
 Мы можем реализовать этот же API без использования языка схемы GraphQL:
 
-```
+```javascript
 var express = require('express');
 var graphqlHTTP = require('express-graphql');
 var graphql = require('graphql');

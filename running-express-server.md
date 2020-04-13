@@ -8,7 +8,7 @@ npm install express express-graphql graphql --save
 
 Давайте изменим наш пример «hello world» так, чтобы это был API-сервер, а не скрипт, выполняющий один запрос. Мы можем использовать модуль «express» для запуска веб-сервера, и вместо того, чтобы выполнять запрос напрямую с помощью функции **graphql**, мы можем использовать библиотеку **express-graphql** для монтирования сервера API GraphQL на эндпойнт HTTP "/graphql":
 
-```
+```javascript
 var express = require('express');
 var graphqlHTTP = require('express-graphql');
 var { buildSchema } = require('graphql');

@@ -13,7 +13,7 @@ $ http://localhost:4000/graphql
 
 Вы должны увидеть выходные данные в виде JSON:
 
-```
+```graphql
 {"data":{"hello":"Hello world!"}}
 ```
 
@@ -21,7 +21,7 @@ $ http://localhost:4000/graphql
 
 Также просто отправить GraphQL из браузера. Откройте http://localhost:4000/graphql, откройте консоль разработчика и вставьте:
 
-```
+```javascript
 fetch('/graphql', {
   method: 'POST',
   headers: {
@@ -36,7 +36,7 @@ fetch('/graphql', {
 
 Вы должны увидеть возвращенные данные, логированные в консоли:
 
-```
+```javascript
 data returned: Object { hello: "Hello world!" }
 ```
 
@@ -44,7 +44,7 @@ data returned: Object { hello: "Hello world!" }
 
 Например, предположим, что вы запускаете пример сервера из [Передачи аргументов](passing-arguments.md), который имеет схему
 
-```
+```graphql
 type Query {
   rollDice(numDice: Int!, numSides: Int): [Int]
 }
@@ -52,7 +52,7 @@ type Query {
 
 Вы можете получить доступ к этому из JavaScript с помощью кода:
 
-```
+```javascript
 var dice = 3;
 var sides = 6;
 var query = `query RollDice($dice: Int!, $sides: Int) {

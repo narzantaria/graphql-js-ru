@@ -2,7 +2,7 @@
 
 Модуль ```graphql/type``` отвечает за определение типов и схемы GraphQL. Вы можете импортировать либо из модуля ```graphql/type```, либо из корневого модуля ```graphql```. Например:
 
-```
+```javascript
 import { GraphQLSchema } from 'graphql'; // ES6
 var { GraphQLSchema } = require('graphql'); // CommonJS
 ```
@@ -70,7 +70,7 @@ A scalar type representing floats.
 
 ### GraphQLSchema
 
-```
+```javascript
 class GraphQLSchema {
   constructor(config: GraphQLSchemaConfig)
 }
@@ -85,7 +85,7 @@ Schema создается путем предоставления корневы
 
 ### Пример
 
-```
+```javascript
 var MyAppSchema = new GraphQLSchema({
   query: MyAppQueryRootType
   mutation: MyAppMutationRootType
@@ -96,7 +96,7 @@ var MyAppSchema = new GraphQLSchema({
 
 ### GraphQLScalarType 
 
-```
+```javascript
 class GraphQLScalarType<InternalType> {
   constructor(config: GraphQLScalarTypeConfig<InternalType>)
 }
@@ -114,7 +114,7 @@ type GraphQLScalarTypeConfig<InternalType> = {
 
 ### Пример
 
-```
+```javascript
 var OddType = new GraphQLScalarType({
   name: 'Odd',
   serialize: oddValue,
@@ -134,7 +134,7 @@ function oddValue(value) {
 
 ### GraphQLObjectType
 
-```
+```javascript
 class GraphQLObjectType {
   constructor(config: GraphQLObjectTypeConfig)
 }
@@ -202,7 +202,7 @@ type GraphQLFieldConfigMap = {
 
 ### Примеры
 
-```
+```javascript
 var AddressType = new GraphQLObjectType({
   name: 'Address',
   fields: {
@@ -228,7 +228,7 @@ var PersonType = new GraphQLObjectType({
 
 ### GraphQLInterfaceType
 
-```
+```javascript
 class GraphQLInterfaceType {
   constructor(config: GraphQLInterfaceTypeConfig)
 }
@@ -245,7 +245,7 @@ type GraphQLInterfaceTypeConfig = {
 
 ### Пример
 
-```
+```javascript
 var EntityType = new GraphQLInterfaceType({
   name: 'Entity',
   fields: {
@@ -256,7 +256,7 @@ var EntityType = new GraphQLInterfaceType({
 
 ### GraphQLUnionType
 
-```
+```javascript
 class GraphQLUnionType {
   constructor(config: GraphQLUnionTypeConfig)
 }
@@ -275,7 +275,7 @@ type GraphQLObjectsThunk = () => Array<GraphQLObjectType>;
 
 ### Пример
 
-```
+```javascript
 var PetType = new GraphQLUnionType({
   name: 'Pet',
   types: [ DogType, CatType ],
@@ -292,7 +292,7 @@ var PetType = new GraphQLUnionType({
 
 ### GraphQLEnumType
 
-```
+```javascript
 class GraphQLEnumType {
   constructor(config: GraphQLEnumTypeConfig)
 }
@@ -327,7 +327,7 @@ type GraphQLEnumValueDefinition = {
 
 ### Пример
 
-```
+```javascript
 var RGBType = new GraphQLEnumType({
   name: 'RGB',
   values: {
@@ -340,7 +340,7 @@ var RGBType = new GraphQLEnumType({
 
 ### GraphQLInputObjectType
 
-```
+```javascript
 class GraphQLInputObjectType {
   constructor(config: GraphQLInputObjectConfig)
 }
@@ -381,7 +381,7 @@ type GraphQLInputObjectFieldMap = {
 
 ### Пример
 
-```
+```javascript
 var GeoPoint = new GraphQLInputObjectType({
   name: 'GeoPoint',
   fields: {
@@ -394,7 +394,7 @@ var GeoPoint = new GraphQLInputObjectType({
 
 ### GraphQLList
 
-```
+```javascript
 class GraphQLList {
   constructor(type: GraphQLType)
 }
@@ -404,7 +404,7 @@ class GraphQLList {
 
 ### Пример
 
-```
+```javascript
 var PersonType = new GraphQLObjectType({
   name: 'Person',
   fields: () => ({
@@ -416,7 +416,7 @@ var PersonType = new GraphQLObjectType({
 
 ### GraphQLNonNull
 
-```
+```javascript
 class GraphQLNonNull {
   constructor(type: GraphQLType)
 }
@@ -426,7 +426,7 @@ class GraphQLNonNull {
 
 ### Пример
 
-```
+```javascript
 var RowType = new GraphQLObjectType({
   name: 'Row',
   fields: () => ({
@@ -439,7 +439,7 @@ var RowType = new GraphQLObjectType({
 
 ### isInputType
 
-```
+```javascript
 function isInputType(type: ?GraphQLType): boolean
 ```
 
@@ -447,7 +447,7 @@ function isInputType(type: ?GraphQLType): boolean
 
 ### isOutputType
 
-```
+```javascript
 function isOutputType(type: ?GraphQLType): boolean
 ```
 
@@ -455,7 +455,7 @@ function isOutputType(type: ?GraphQLType): boolean
 
 ### isLeafType
 
-```
+```javascript
 function isLeafType(type: ?GraphQLType): boolean
 ```
 
@@ -463,7 +463,7 @@ function isLeafType(type: ?GraphQLType): boolean
 
 ### isCompositeType
 
-```
+```javascript
 function isCompositeType(type: ?GraphQLType): boolean
 ```
 
@@ -471,7 +471,7 @@ function isCompositeType(type: ?GraphQLType): boolean
 
 ### isAbstractType
 
-```
+```javascript
 function isAbstractType(type: ?GraphQLType): boolean
 ```
 
@@ -481,7 +481,7 @@ function isAbstractType(type: ?GraphQLType): boolean
 
 ### getNullableType
 
-```
+```javascript
 function getNullableType(type: ?GraphQLType): ?GraphQLNullableType
 ```
 
@@ -489,7 +489,7 @@ function getNullableType(type: ?GraphQLType): ?GraphQLNullableType
 
 ### getNamedType
 
-```
+```javascript
 function getNamedType(type: ?GraphQLType): ?GraphQLNamedType
 ```
 
@@ -499,7 +499,7 @@ function getNamedType(type: ?GraphQLType): ?GraphQLNamedType
 
 ### GraphQLInt
 
-```
+```javascript
 var GraphQLInt: GraphQLScalarType;
 ```
 
@@ -507,7 +507,7 @@ GraphQLScalarType, представляющий int.
 
 ### GraphQLFloat 
 
-```
+```javascript
 var GraphQLFloat: GraphQLScalarType;
 ```
 
@@ -515,7 +515,7 @@ GraphQLScalarType представляющий float.
 
 ### GraphQLString 
 
-```
+```javascript
 var GraphQLString: GraphQLScalarType;
 ```
 
@@ -523,7 +523,7 @@ GraphQLScalarType представляющий string.
 
 ### GraphQLBoolean 
 
-```
+```javascript
 var GraphQLBoolean: GraphQLScalarType;
 ```
 
@@ -531,7 +531,7 @@ GraphQLScalarType представляющий boolean.
 
 ### GraphQLID 
 
-```
+```javascript
 var GraphQLID: GraphQLScalarType;
 ```
 

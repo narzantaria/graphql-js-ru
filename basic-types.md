@@ -10,7 +10,7 @@
 
 Каждый из этих типов напрямую сопоставлен с JavaScript, поэтому вы можете просто возвращать простые старые объекты JavaScript в API, которые возвращают эти типы. Вот пример, который показывает, как использовать некоторые из этих основных типов:
 
-```
+```javascript
 var express = require('express');
 var graphqlHTTP = require('express-graphql');
 var { buildSchema } = require('graphql');

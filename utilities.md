@@ -2,7 +2,7 @@
 
 Модуль ```graphql/utilities``` содержит общие полезные вычисления для использования с языком GraphQL и объектами типов. Вы можете импортировать либо из модуля ```graphql/utilities```, либо из корневого модуля ```graphql```. Например:
 
-```
+```javascript
 import { introspectionQuery } from 'graphql'; // ES6
 var { introspectionQuery } = require('graphql'); // CommonJS
 ```
@@ -47,7 +47,7 @@ var { introspectionQuery } = require('graphql'); // CommonJS
 
 ### introspectionQuery
 
-```
+```javascript
 var introspectionQuery: string
 ```
 
@@ -55,7 +55,7 @@ var introspectionQuery: string
 
 ### buildClientSchema
 
-```
+```javascript
 function buildClientSchema(
   introspection: IntrospectionQuery
 ): GraphQLSchema
@@ -69,7 +69,7 @@ function buildClientSchema(
 
 ### buildSchema 
 
-```
+```javascript
 function buildSchema(source: string | Source): GraphQLSchema {
 ```
 
@@ -77,7 +77,7 @@ function buildSchema(source: string | Source): GraphQLSchema {
 
 ### printSchema
 
-```
+```javascript
 function printSchema(schema: GraphQLSchema): string {
 ```
 
@@ -85,7 +85,7 @@ function printSchema(schema: GraphQLSchema): string {
 
 ### printIntrospectionSchema
 
-```
+```javascript
 function printIntrospectionSchema(schema: GraphQLSchema): string {
 ```
 
@@ -93,7 +93,7 @@ function printIntrospectionSchema(schema: GraphQLSchema): string {
 
 ### buildASTSchema
 
-```
+```javascript
 function buildASTSchema(
   ast: SchemaDocument,
   queryTypeName: string,
@@ -105,7 +105,7 @@ function buildASTSchema(
 
 ### typeFromAST
 
-```
+```javascript
 function typeFromAST(
   schema: GraphQLSchema,
   inputTypeAST: Type
@@ -116,7 +116,7 @@ function typeFromAST(
 
 ### astFromValue
 
-```
+```javascript
 function astFromValue(
   value: any,
   type?: ?GraphQLType
@@ -131,7 +131,7 @@ function astFromValue(
 
 ### TypeInfo
 
-```
+```javascript
 class TypeInfo {
   constructor(schema: GraphQLSchema)
   getType(): ?GraphQLOutputType {
@@ -149,7 +149,7 @@ TypeInfo - это служебный класс, который, учитыва�
 
 ### isValidJSValue 
 
-```
+```javascript
 function isValidJSValue(value: any, type: GraphQLInputType): string[]
 ```
 
@@ -157,7 +157,7 @@ function isValidJSValue(value: any, type: GraphQLInputType): string[]
 
 ### isValidLiteralValue
 
-```
+```javascript
 function isValidLiteralValue(
   type: GraphQLInputType,
   valueAST: Value

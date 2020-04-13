@@ -1,13 +1,13 @@
 Модуль express-graphql предоставляет простой способ создания сервера [Express](https://expressjs.com/ru/), на котором работает API GraphQL.
 
-```
+```javascript
 import graphqlHTTP from 'express-graphql'; // ES6
 var graphqlHTTP = require('express-graphql'); // CommonJS
 ```
 
 ## graphqlHTTP 
 
-```
+```javascript
 graphqlHTTP({
   schema: GraphQLSchema,
   graphiql?: ?boolean,

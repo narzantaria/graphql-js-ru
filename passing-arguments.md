@@ -1,7 +1,7 @@
 # Передача аргументов
 Как и в случае REST API, в API GraphQL обычно передаются аргументы к конечной точке. Определяя аргументы на языке схемы, проверка типов происходит автоматически. Каждый аргумент должен быть назван и иметь тип. Например, в документации по [базовым типам](basic-types.md) у нас был эндпойнт с именем ```rollThreeDice```:
 
-```
+```graphql
 type Query {
   rollThreeDice: [Int]
 }
@@ -9,7 +9,7 @@ type Query {
 
 Вместо жесткого кодирования "three" нам может потребоваться более общая функция, которая бросает кубики ```numDice```, каждая из которых имеет стороны ```numSides```. Мы можем добавить аргументы в язык схемы GraphQL следующим образом:
 
-```
+```graphql
 type Query {
   rollDice(numDice: Int!, numSides: Int): [Int]
 }
@@ -19,7 +19,7 @@ type Query {
 
 До сих пор наши функции resolver не принимали аргументов. Когда resolver принимает аргументы, они передаются как один объект "args", как первый аргумент функции. Таким образом, ```rollDice``` может быть реализован как:
 
-```
+```javascript
 var root = {
   rollDice: (args) => {
     var output = [];
@@ -33,7 +33,7 @@ var root = {
 
 Для этих параметров удобно использовать [деструктурирующее присваивание ES6](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), поскольку вы знаете, в каком формате они будут. Таким образом, мы можем также написать ```rollDice``` как
 
-```
+```javascript
 var root = {
   rollDice: ({numDice, numSides}) => {
     var output = [];
@@ -49,7 +49,7 @@ var root = {
 
 Весь код сервера, на котором размещен этот ```rollDice``` API:
 
-```
+```javascript
 var express = require('express');
 var graphqlHTTP = require('express-graphql');
 var { buildSchema } = require('graphql');
@@ -84,7 +84,7 @@ console.log('Running a GraphQL API server at localhost:4000/graphql');
 
 Когда вы вызываете этот API, вы должны передавать каждый аргумент по имени. Таким образом, для вышеприведенного сервера вы можете выполнить этот запрос GraphQL, чтобы бросить три шестигранных кубика:
 
-```
+```graphql
 {
   rollDice(numDice: 3, numSides: 6)
 }
@@ -96,7 +96,7 @@ console.log('Running a GraphQL API server at localhost:4000/graphql');
 
 Например, некоторый код JavaScript, который вызывает наш сервер выше:
 
-```
+```javascript
 var dice = 3;
 var sides = 6;
 var query = `query RollDice($dice: Int!, $sides: Int) {

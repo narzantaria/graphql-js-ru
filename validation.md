@@ -2,7 +2,7 @@
 
 Модуль ```graphql/validation``` выполняет этап проверки выполнения результата GraphQL. Вы можете импортировать либо из модуля ```graphql/validation```, либо из корневого модуля graphql. Например:
 
-```
+```javascript
 import { validate } from 'graphql/validation'; // ES6
 var { validate } = require('graphql/validation'); // CommonJS
 ```
@@ -18,7 +18,7 @@ var { validate } = require('graphql/validation'); // CommonJS
 
 ### validate
 
-```
+```javascript
 function validate(
   schema: GraphQLSchema,
   ast: Document,
@@ -38,7 +38,7 @@ Visitors могут также предоставить visitSpreadFragments: tr
 
 ### specifiedRules 
 
-```
+```javascript
 var specifiedRules: Array<(context: ValidationContext): any>
 ```
 

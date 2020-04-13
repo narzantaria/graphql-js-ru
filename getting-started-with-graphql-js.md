@@ -15,7 +15,7 @@ $ npm install graphql --save
 
 Для обработки запросов GraphQL нам нужна схема, которая определяет тип запроса, и нам нужен корень API с функцией под названием «resolver» для каждой конечной точки API. Для API, который просто возвращает «Hello world!», Мы можем поместить этот код в файл с именем ```server.js```:
 
-```
+```javascript
 var { graphql, buildSchema } = require('graphql');
 
 // Construct a schema, using GraphQL schema language
@@ -43,7 +43,7 @@ node server.js
 ```
 Вы должны увидеть выведенный ответ GraphQL:
 
-```
+```graphql
 { data: { hello: 'Hello world!' } }
 ```
 Поздравляем - вы только что выполнили запрос GraphQL!

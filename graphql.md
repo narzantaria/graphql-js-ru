@@ -2,7 +2,7 @@
 
 Модуль ```graphql``` экспортирует основное подмножество функций GraphQL для создания систем и серверов типа GraphQL.
 
-```
+```javascript
 import { graphql } from 'graphql'; // ES6
 var { graphql } = require('graphql'); // CommonJS
 ```
@@ -60,7 +60,7 @@ Lex-ит, парсит, проверяет и выполняет запрос Gr
 
 ## graphql
 
-```
+```javascript
 graphql(
   schema: GraphQLSchema,
   requestString: string,

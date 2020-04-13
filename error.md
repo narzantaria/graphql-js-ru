@@ -22,7 +22,7 @@ var { GraphQLError } = require('graphql'); // CommonJS
 
 ### GraphQLError
 
-```
+```javascript
 class GraphQLError extends Error {
  constructor(
    message: string,
@@ -40,7 +40,7 @@ class GraphQLError extends Error {
 
 #### syntaxError
 
-```
+```javascript
 function syntaxError(
   source: Source,
   position: number,
@@ -52,7 +52,7 @@ function syntaxError(
 
 #### locatedError
 
-```
+```javascript
 function locatedError(error: ?Error, nodes: Array<any>): GraphQLError {
 ```
 
@@ -60,7 +60,7 @@ function locatedError(error: ?Error, nodes: Array<any>): GraphQLError {
 
 #### formatError
 
-```
+```javascript
 function formatError(error: GraphQLError): GraphQLFormattedError
 
 type GraphQLFormattedError = {

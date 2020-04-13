@@ -2,7 +2,7 @@
 
 Модуль ```graphql/language``` отвечает за синтаксический анализ и работу на языке GraphQL. Вы можете импортировать либо из модуля ```graphql/language```, либо из корневого модуля ```graphql```. Например:
 
-```
+```javascript
 import { Source } from 'graphql'; // ES6
 var { Source } = require('graphql'); // CommonJS
 ```
@@ -46,7 +46,7 @@ var { Source } = require('graphql'); // CommonJS
 
 ### Source
 
-```
+```javascript
 export class Source {
   constructor(body: string, name?: string)
 }
@@ -56,7 +56,7 @@ export class Source {
 
 ### getLocation
 
-```
+```javascript
 function getLocation(source: Source, position: number): SourceLocation
 
 type SourceLocation = {
@@ -71,7 +71,7 @@ type SourceLocation = {
 
 ### lex
 
-```
+```javascript
 function lex(source: Source): Lexer;
 
 type Lexer = (resetPosition?: number) => Token;
@@ -92,7 +92,7 @@ export type Token = {
 
 ### parse
 
-```
+```javascript
 export function parse(
   source: Source | string,
   options?: ParseOptions
@@ -105,7 +105,7 @@ export function parse(
 
 ### parseValue
 
-```
+```javascript
 export function parseValue(
   source: Source | string,
   options?: ParseOptions
@@ -126,7 +126,7 @@ export function parseValue(
 
 ### visit
 
-```
+```javascript
 function visit(root, visitor, keyMap)
 ```
 
@@ -136,7 +136,7 @@ function visit(root, visitor, keyMap)
 
 При использовании visit() для редактирования AST, исходный AST не будет изменен, и новая функция AST с внесенными изменениями будет возвращена из функции visitor.
 
-```
+```javascript
 var editedAST = visit(ast, {
   enter(node, key, parent, path, ancestors) {
     // @return
@@ -161,7 +161,7 @@ var editedAST = visit(ast, {
 
 1) Именованные посетители срабатывают при входе в node определенного вида.
 
-```
+```javascript
 visit(ast, {
   Kind(node) {
     // enter the "Kind" node
@@ -171,7 +171,7 @@ visit(ast, {
 
 2) Именованные посетители, которые срабатывают при входе и выходе из node определенного вида.
 
-```
+```javascript
 visit(ast, {
   Kind: {
     enter(node) {
@@ -186,7 +186,7 @@ visit(ast, {
 
 3) Общие visitors, которые срабатывают при входе и выходе из любого node.
 
-```
+```javascript
 visit(ast, {
   enter(node) {
     // enter any node
@@ -199,7 +199,7 @@ visit(ast, {
 
 4) Параллельные visitors для входа и выхода из node определенного вида.
 
-```
+```javascript
 visit(ast, {
   enter: {
     Kind(node) {
@@ -222,7 +222,7 @@ visit(ast, {
 
 ### print 
 
-```
+```javascript
 function print(ast): string
 ```
 

@@ -2,7 +2,7 @@
 
 Модуль ```graphql/execution``` отвечает за этап выполнения выполнения запроса GraphQL. Вы можете импортировать либо из модуля ```graphql/execution```, либо из корневого модуля ```graphql```. Например:
 
-```
+```javascript
 import { execute } from 'graphql'; // ES6
 var { execute } = require('graphql'); // CommonJS
 ```
@@ -16,7 +16,7 @@ var { execute } = require('graphql'); // CommonJS
 
 ### execute 
 
-```
+```javascript
 export function execute(
   schema: GraphQLSchema,
   documentAST: Document,

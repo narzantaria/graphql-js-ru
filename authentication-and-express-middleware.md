@@ -5,7 +5,7 @@
 
 Например, скажем, мы хотели, чтобы наш сервер регистрировал IP-адрес каждого запроса, и мы также хотим написать API, который возвращает IP-адрес вызывающей стороны. Первое можно сделать с помощью middleware, а второе - путем обращения к объекту ```request``` в resolver-е. Вот код сервера, который реализует это:
 
-```
+```javascript
 var express = require('express');
 var graphqlHTTP = require('express-graphql');
 var { buildSchema } = require('graphql');
