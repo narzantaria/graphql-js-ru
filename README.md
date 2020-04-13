@@ -20,6 +20,12 @@ https://graphql.org/graphql-js/ перевод на русский
 * Справочник API
   * [express-graphql](express-graphql.md)
   * [graphql](graphql.md)
+  * [graphql/error](error.md)
+  * [graphql/execution](execution.md)
+  * [graphql/language](language.md)
+  * [graphql/type](type.md)
+  * [graphql/utilities](utilities)
+  * [graphql/validation](validation)
 
 
 
