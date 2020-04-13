@@ -11,39 +11,35 @@ var { Source } = require('graphql'); // CommonJS
 
 ### Источник
 
-#### class Source
+#### [class Source](#Source)
 Представляет входную строку для сервера GraphQL
-
-#### function getLocation
+#### [function getLocation](#getLocation)
 Преобразует смещение символа в строку и столбец в Source
 
 ### Lexer
 
-#### function lex
+#### [function lex](#lex)
 Лексирует источник GraphQL в соответствии с GraphQL Grammar
 
 ### Parser
 
-#### function parse
+#### [function parse](#parse)
 Парсит GraphQL Source в соответствии с GraphQL Grammar
-
-#### function parseValue
+#### [function parseValue](#parseValue)
 Разбирает значение в соответствии с GraphQL Grammar
-
-#### var Kind
+#### [var Kind](#Kind)
 Представляет различные виды анализируемых узлов AST.
 
 ### Visitor
 
-#### function visit
+#### [function visit](#visit)
 Универсальный visitor для прохождения проанализированного GraphQL AST
-
-#### var BREAK
+#### [var BREAK](#BREAK)
 Токен, позволяющий вырваться из посетителя.
 
 ### Printer
 
-#### function print
+#### [function print](#print)
 Печатает AST в стандартном формате.
 
 ## Source 

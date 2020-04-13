@@ -9,7 +9,7 @@ var { execute } = require('graphql'); // CommonJS
 
 ## Обзор
 
-#### function execute
+#### [function execute](#execute)
 Выполняет запрос GraphQL по предоставленной схеме.
 
 ## Execution 
