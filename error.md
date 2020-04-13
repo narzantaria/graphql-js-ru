@@ -9,16 +9,13 @@ var { GraphQLError } = require('graphql'); // CommonJS
 
 ## Обзор
 
-#### class GraphQLError
+#### [class GraphQLError](#GraphQLError)
 Представление ошибки, которая произошла в GraphQL.
-
-#### функция syntaxError
+#### [функция syntaxError](#syntaxError)
 Создает GraphQLError, представляющую синтаксическую ошибку.
-
-#### функция localError
+#### [функция localError](#localError)
 Создает новый GraphQLError, осведомленный о местоположении, ответственном за ошибку.
-
-#### функция formatError
+#### [функция formatError](#formatError)
 Отформатируйте ошибку в соответствии с правилами, описанными в формате ответа.
 
 ## Ошибки

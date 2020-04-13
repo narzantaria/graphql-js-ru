@@ -24,8 +24,8 @@ https://graphql.org/graphql-js/ перевод на русский
   * [graphql/execution](execution.md)
   * [graphql/language](language.md)
   * [graphql/type](type.md)
-  * [graphql/utilities](utilities)
-  * [graphql/validation](validation)
+  * [graphql/utilities](utilities.md)
+  * [graphql/validation](validation.md)
 
 
 
