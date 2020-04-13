@@ -9,10 +9,9 @@ var { validate } = require('graphql/validation'); // CommonJS
 
 ## Обзор
 
-### function validate
+### [function validate](#validate)
 Проверяет AST по предоставленной схеме.
-
-### var specifiedRules
+### [var specifiedRules](#specifiedRules)
 Список стандартных правил проверки, описанных в спецификации GraphQL.
 
 ## Validation 

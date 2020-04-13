@@ -11,43 +11,36 @@ var { introspectionQuery } = require('graphql'); // CommonJS
 
 ### Introspection
 
-#### var introspectionQuery
+#### [var introspectionQuery](#introspectionQuery)
 Запрос introspection GraphQL, содержащий достаточно информации для воспроизведения системы типов.
-
-#### function buildClientSchema
+#### [function buildClientSchema](#buildClientSchema)
 Создает клиентскую схему с учетом результат запроса схемы с `introspectionQuery`.
 
 ### Schema Language
 
-#### function buildSchema
+#### [function buildSchema](#buildSchema)
 Создает объект Schema из языка схем GraphQL.
-
-#### function printSchema
+#### [function printSchema](#printSchema)
 Выводит(?) схему в стандартном формате.
-
-#### function printIntrospectionSchema
+#### [function printIntrospectionSchema](#printIntrospectionSchema)
 Выводит(?) функции introspection схемы в стандартном формате.
-
-#### function buildASTSchema
+#### [function buildASTSchema](#buildASTSchema)
 Создает схему из разобранной(parsed) схемы AST.
-
-#### function typeFromAST
+#### [function typeFromAST](#typeFromAST)
 Ищет тип, указанный в AST в GraphQLSchema.
-
-#### function astFromValue
+#### [function astFromValue](#astFromValue)
 Создает значение Input GraphQL AST с учетом значения JavaScript.
 
 ### Visitors
 
-#### class TypeInfo
+#### [class TypeInfo](#TypeInfo)
 Отслеживает тип и определения полей во время прохода(traversal) AST visitor.
 
 ### Value Validation
 
-#### function isValidJSValue
+#### [function isValidJSValue](#isValidJSValue)
 Определяет, допустимо ли значение JavaScript для типа GraphQL.
-
-#### function isValidLiteralValue
+#### [function isValidLiteralValue](#isValidLiteralValue)
 Определяет, допустимо ли литеральное значение из AST для типа GraphQL.
 
 ## Introspection

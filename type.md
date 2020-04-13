@@ -11,75 +11,59 @@ var { GraphQLSchema } = require('graphql'); // CommonJS
 
 ### Schema
 
-### class GraphQLSchema
+### [class GraphQLSchema](#GraphQLSchema)
 Представление возможностей GraphQL Server.
 
 ### Definitions
 
-### class GraphQLScalarType
+### [class GraphQLScalarType](#GraphQLScalarType)
 Тип scalar в GraphQL.
-
-### class GraphQLObjectType
+### [class GraphQLObjectType](#GraphQLObjectType)
 Тип object в GraphQL, который содержит fields.
-
-### class GraphQLInterfaceType
+### [class GraphQLInterfaceType](#GraphQLInterfaceType)
 Тип interface в GraphQL который определяет представления полей, которые будет содержать.
-
-### class GraphQLUnionType
+### [class GraphQLUnionType](#GraphQLUnionType)
 Тип union в GraphQL который определяет список представлений.
-
-### class GraphQLEnumType
+### [class GraphQLEnumType](#GraphQLEnumType)
 Тип enum в GraphQL который определяет список допустимых значений.
-
-### class GraphQLInputObjectType
+### [class GraphQLInputObjectType](#GraphQLInputObjectType)
 Тип input object в GraphQL, который представляет структурированные input.
-
-### class GraphQLList
+### [class GraphQLList](#GraphQLList)
 Обертка типов вокруг других типов, представляющая список этих типов.
-
-### class GraphQLNonNull
+### [class GraphQLNonNull](#GraphQLNonNull)
 Обертка типов вокруг других типов, которая представляет ненулевую версию этих типов.
 
 ### Predicates
 
-### function isInputType
+### [function isInputType](#isInputType)
 Возвращает, если тип может использоваться в качестве входных типов для аргументов и директив.
-
-### function isOutputType
+### [function isOutputType](#isOutputType)
 Возвращает, если тип может использоваться в качестве выходных типов как результат полей.
-
-### function isLeafType
+### [function isLeafType](#isLeafType)
 Возвращает, если тип может быть конечным значением в ответе.
-
-### function isCompositeType
+### [function isCompositeType](#isCompositeType)
 Возвращает, если тип может быть родительским контекстом набора selection.
-
-### function isAbstractType
+### [function isAbstractType](#isAbstractType)
 Возвращает, если тип является комбинацией типов объектов.
 
 ### Un-modifiers
 
-### function getNullableType
+### [function getNullableType](#getNullableType)
 Удаляет любые ненулевые wrappers из типа.
-
-### function getNamedType
+### [function getNamedType](#getNamedType)
 Удаляет любые ненулевые или списки wrappers из типа.
 
 ### Scalars
 
-#### var GraphQLInt
+#### [var GraphQLInt](#GraphQLInt)
 Скалярный тип, представляющий целые числа.
-
-#### var GraphQLFloat
+#### [var GraphQLFloat](#GraphQLFloat)
 A scalar type representing floats.
-
-#### var GraphQLString
+#### [var GraphQLString](#GraphQLString)
 Скалярный тип, представляющий числа с плавающей точкой.
-
-#### var GraphQLBoolean
+#### [var GraphQLBoolean](#GraphQLBoolean)
 Скалярный тип, представляющий логические значения.
-
-#### var GraphQLID
+#### [var GraphQLID](#GraphQLID)
 Скалярный тип, представляющий ID.
 
 ## Schema
