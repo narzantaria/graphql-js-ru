@@ -1,4 +1,7 @@
 # Документация GraphQL.js
+
+![graphql](img/graphql.png)
+
 https://graphql.org/graphql-js/ перевод на русский
 
 > **GraphQL** не привязан к какому-либо языку или технологии, но **graphql.js** - это его реализация в языке **JavaScript**. Поэтому данная документация особенно важна для 
