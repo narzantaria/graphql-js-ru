@@ -18,7 +18,8 @@ https://graphql.org/graphql-js/ перевод на русский
 * Продвинутые темы
   * [Конструирование типов](constructing-types.md)
 * Справочник API
-  * [express-graphql](express-graphql.md)  
+  * [express-graphql](express-graphql.md)
+  * [graphql](graphql.md)
 
 
 
